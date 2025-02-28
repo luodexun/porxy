@@ -1,0 +1,53 @@
+.w-detail-request textarea {
+  padding: 5px;
+  border: none;
+}
+
+.w-detail-request-headers,
+.w-detail-request-cookies,
+.w-detail-request-query,
+.w-detail-request-form,
+.w-detail-request-form {
+  overflow: auto;
+}
+
+.w-detail-inspectors-title,
+.w-detail-webforms-title {
+  line-height: 18px;
+  background: #f1f3f4;
+  font-size: 12px;
+  padding: 0 10px;
+  border-bottom: 1px solid #ccc;
+}
+.w-detail-inspectors-title {
+  padding: 0 5px !important;
+}
+.w-detail-inspectors-title {
+  font-weight: bold;
+}
+.w-detail-webforms-title {
+  line-height: 16px !important;
+}
+.w-detail-inspectors-url.w-properties td pre {
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 35px;
+  padding-right: 8px;
+}
+
+.w-detail-inspectors-url.w-properties th {
+  width: 50px;
+}
+
+.w-detail-inspectors-url.w-properties td {
+  padding-right: 0;
+}
+
+.w-custom-tabs::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
+.w-custom-tabs::-webkit-scrollbar-button {
+  width: 1px;
+  height: 1px;
+}
