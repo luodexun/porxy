@@ -41,6 +41,7 @@
     "colors": "1.1.2",
     "express": "^4.21.2",
     "extend": "^3.0.2",
+    "form-data": "^4.0.2",
     "fs-extra2": "^1.0.0",
     "hagent": "^0.9.3",
     "hparser": "^0.5.0",
@@ -69,7 +70,7 @@
   },
   "scripts": {
     "dev": "webpack --config ./biz/webui/htdocs/src/webpack.config -w",
-    "start": "node bin/whistle.js run --socksPort 8890 --httpsPort 8891 -- uiPort 8900",
+    "start": "node bin/whistle.js run --socksPort 8890 --httpsPort 8891  --httpPort 8892 --uiport 8900",
     "ca": "node bin/whistle.js ca",
     "test": "npm run lintfix && node test/index.test.js",
     "lint": "eslint *.js ./lib ./bin ./biz ./test ./docs/script",
