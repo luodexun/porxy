@@ -11,9 +11,9 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 const socks5Agent = new SocksProxyAgent('socks5://127.0.0.1:8890');
 // const socks5Agent = new HttpsProxyAgent('http://127.0.0.1:8899');
 const httpAgent = new HttpProxyAgent('http://127.0.0.1:8899');
-// socks5Axios.defaults.httpsAgent = socks5Agent;
-// socks5Axios.defaults.httpAgent = httpAgent;
-// socks5Axios.defaults.proxy = false;
+socks5Axios.defaults.httpsAgent = socks5Agent;
+socks5Axios.defaults.httpAgent = httpAgent;
+socks5Axios.defaults.proxy = false;
 
 // socks5Axios.get('https://fire.letmeshow.asia/list').then((res) => {
 //   console.log(res.data);
