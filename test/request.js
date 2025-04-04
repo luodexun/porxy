@@ -2,18 +2,17 @@ import axios from 'axios';
 import { SocksProxyAgent } from 'socks-proxy-agent';
 import {HttpsProxyAgent} from 'https-proxy-agent';
 import {HttpProxyAgent} from 'http-proxy-agent';
-import * as http from 'http';
-
+import * as http2 from 'http2';
 let socks5Axios = axios;
 //禁用SSL证书验证
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
 
 // const socks5Agent = new SocksProxyAgent('socks5://127.0.0.1:8899');
-const socks5Agent = new HttpsProxyAgent('http://127.0.0.1:8899');
-const httpAgent = new HttpProxyAgent('http://127.0.0.1:8899');
+const socks5Agent = new HttpsProxyAgent('http://127.0.0.1:8890');
+const httpAgent = new HttpProxyAgent('http://127.0.0.1:8890');
 socks5Axios.defaults.httpsAgent = socks5Agent;
-socks5Axios.defaults.httpAgent = httpAgent;
+socks5Axios.defaults.httpAgent = socks5Agent;
 socks5Axios.defaults.proxy = false;
 
 // socks5Axios.get('https://fire.letmeshow.asia/list').then((res) => {
